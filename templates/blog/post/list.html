@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block title %} IT-news {% endblock title %}
+
+{% block content %}
+<h1>It news</h1>
+{% for post in posts %}
+<div class="post">
+    <h2>
+        <a href="{% post.get_absolute_url %}">{{ post.title }}</a>
+    </h2>
+    <p class="date">
+        Published {{ post.published_at }} by {{ post.author }}
+    </p>
+</div>
+{% endfor %}
+{% include 'paginator.html' with page=page_obj %}
+{% endblock content %}

@@ -4,5 +4,6 @@ from .views import *
 app_name = 'blogapp'
 
 urlpatterns = [
-    # path('', )
+    path('', PostListView.as_view(paginate_by=1), name='list'),
+    path('<int:year>/<int:month>/<int:day>/<str:slug>/', post_detail , name="post_detail")
 ]

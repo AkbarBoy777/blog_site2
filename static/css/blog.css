@@ -88,10 +88,7 @@ input[type=submit] {
 /* comments */
 .comment {
     padding: 10px;
-}
-
-.comment:nth-child(even) {
-    background: #efefef;
+    background-color: white;
 }
 
 .comment .info {
@@ -107,4 +104,7 @@ input[type=submit] {
 }
 .post:hover {
     background-color: #51515b;
+}
+p{
+    color: black;
 }
